@@ -1,0 +1,19 @@
+/* collections */
+.collection{display: flex;justify-content: space-between;gap: 35px;padding: 20px;}
+.collection h3{font-size: 12px;font-family: 'Poppins', sans-serif;;padding-bottom: 10px;padding-top: 10px;font-weight: 800;}
+.collection p{font-size: 9px;font-family: 'Poppins', sans-serif;}
+/* .collection__container__card{width: ;} */
+.collection__container__card img{width: 100%;} 
+.collection__middle{border-left: 5px solid black;}
+.collection__input {display: flex; justify-content: space-between;align-items: center; padding: 2px;margin-bottom: 10px;}
+.colection-image input{outline: none;}
+
+.collection__input{border: 2px solid black;border-radius: 5px;}
+@media screen and (min-width:768px) {
+    .collection h3{font-size: 35px;padding-bottom: 10px;padding-top: 10px;font-weight: 700;}
+.collection p{font-size: 20px;}
+.collection__container__card img{width: 70%;}
+.collection__left{padding-right: 40px;}
+.collection__input {display: flex; justify-content: space-between;align-items: center; padding: 10px;margin-bottom: 30px;border-radius: 15px;}
+
+}

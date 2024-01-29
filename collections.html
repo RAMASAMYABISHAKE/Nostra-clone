@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collections.css">
+    <script src="collections.js"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- top -->
+    <div id="top" class="bg-black text-white flex justify-center p-1.5 gap-10 text-xs md:text-xl md:gap-40 ">
+        <p class="top__para">Sign Up and GET 20% OFF for your first Order</p>
+        <p class="top__para" onclick="gone()">x</p>
+    </div>
+    <!-- nav bar -->
+    <div class="flex justify-between items-center p-5 pb-3 sticky z-20 top-0 bg-white">
+        <h1 class="text-2xl font-extrabold  ">Nostra</h1>
+        <i id="menu" onclick="menuicon()" class="fa-solid fa-bars cu md:hidden"></i>
+        <div class="hidden md:flex gap-14 ">
+            <p><a class="hover:underline" href="index.html">Home</a></p>
+            <p><a class="hover:underline" href="">New Arrival</a></p>
+            <p><a class="hover:underline" href="">Most Wanted</a></p>
+            <p><a class="hover:underline" href="collections.html">Collections</a></p>
+            <p><a class="hover:underline" href="contact.html">Contact Us</a></p>
+        </div>
+    </div>
+    <!-- side navbar -->
+    <div id="sidenav" class=" fixed z-20 top-0 transition-all duration-1000">
+        <div class="p-5  text-right " id="side-text">
+            <p class="inline cursor-pointer " onclick="sidego()">X</p>
+        </div>
+
+        <div class="flex flex-col p-5 gap-10">
+            <P class="hover:underline hover:text-black text-gray-600 cursor-pointer"><a href="index.html">Home</a></P>
+            <P class="hover:underline hover:text-black text-gray-600 cursor-pointer"><a href="#new-arrivals">New
+                    Arrivals</a></P>
+            <P class="hover:underline hover:text-black text-gray-600 cursor-pointer"><a href="#most-wanted">Most
+                    Wanted</a></P>
+            <P class="hover:underline hover:text-black text-gray-600 cursor-pointer"><a
+                    href="collections.html">Collections</a></P>
+            <P class="hover:underline hover:text-black text-gray-600 cursor-pointer"><a href="contact.html">Contact</a>
+            </P>
+        </div>
+    </div>
+
+    <!-- collection -->
+    <div class="collection">
+        <div class="collection__left">
+            <div>
+                <h3>Occasion</h3>
+                <p><input type="checkbox" name="check" value="Summer" >Summer</p>
+                <p><input type="checkbox" name="check" value="Party"> Party</p>
+                <p><input type="checkbox" name="check" value="Beach"> Beach</p>
+            </div>
+            <div>
+                <h3>Colors</h3>
+                <p><input type="checkbox" name="check" value="Red"> Red</p>
+                <p><input type="checkbox" name="check" value="Blue">Blue</p>
+                <p><input type="checkbox" name="check" value="White">White</p>
+                <p><input type="checkbox" name="check" value="Green">Green</p>
+            </div>
+            <div></div>
+            <h3>Arrivals</h3>
+            <p><input type="checkbox" name="check" value="New">New</p>
+            <p><input type="checkbox" name="check" value="Old">Old</p>
+        </div>
+        <div class="collection__middle"></div>
+        <div class="colection-image">
+            <div class="collection__input"><input type="text" placeholder="Search"><i
+                    class="fa-solid fa-magnifying-glass"></i> </div>
+            <div class="grid grid-cols-3 gap-3" id="container">
+                <div class="collection__container__card"><img src="./Images/collection 1.jpg" alt="">
+                    <p>Floral Summer Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 2.jpg" alt="">
+                    <p>Summer Green</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 3.jpg" alt="">
+                    <p>Party Floral Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 7.jpg" alt="">
+                    <p>Floral Summer Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 4.jpg" alt="">
+                    <p>Beach Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 6.jpg" alt="">
+                    <p>Shirt Party Red</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 3.jpg" alt="">
+                    <p>Party Floral Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 6.jpg" alt="">
+                    <p>Shirt Party Red</p>
+                    <p>&#8377 320</p>
+                </div>
+                <div class="collection__container__card"><img src="./Images/collection 1.jpg" alt="">
+                    <p>Floral Summer Shirt</p>
+                    <p>&#8377 320</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- subscription -->
+    <div class="subscribe">
+        <h1>Join our News Letter</h1>
+        <p class="subscribe-content">Signup for our email newspaper to get exclusive discounts, updates, and more
+        </p>
+        <input type="text">
+        <div class="button-subs">
+            <p class="button-subscribe">Subscribe <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <h3>Nostra</h3>
+        <p class="footer-content">The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for
+            those interest</p>
+        <div class="footer-media"><i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-x-twitter"></i> <i
+                class="fa-brands fa-facebook"></i></div>
+        <p class="footer-end">@2023 Nostra.com</p>
+    </div>
+    <script>
+        // selecting input
+
+        // var Occasion = document.getElementsByName("occasion")
+        // var color = document.getElementsByName("colors")
+        // var arrivals = document.getElementsByName("arrivals")
+
+        var search = document.querySelector(".collection__input")
+        var container = document.getElementById("container")
+        var divlist = container.querySelectorAll("div")
+        
+
+        search.addEventListener("keyup", function () {
+            var enteredvalue = event.target.value.toUpperCase()
+
+
+            for (count = 0; count < divlist.length; count = count + 1) {
+                var productname = divlist[count].querySelector("p").textContent
+
+                if (productname.toUpperCase().indexOf(enteredvalue) < 0) {
+                    divlist[count].style.display = "none"
+                }
+                else {
+                    divlist[count].style.display = "block"
+                }
+            }
+        })
+
+       // collects sellecting
+var container = document.getElementById("container")
+ var divlist =container.querySelectorAll("div")
+var check = document.getElementsByName("check")
+console.log(check)
+console.log(divlist)
+skill = []
+//
+for(count=0;count<check.length;count=count+1){
+    check[count].addEventListener("click",function(){
+        if(event.target.checked){
+        skill.push(event.target.value)
+        console.log(skill)
+        update()
+    }
+    else{var index = skill.indexOf(event.target.value)
+    skill.splice(index,1)
+    console.log(skill)
+}
+})
+   
+}
+function update() {
+    for(count=0;count<check.length;count=count+1){
+    check[count].addEventListener("change",function(){
+            var enteredvalue = event.target.value.toUpperCase()
+            for (count = 0; count < divlist.length; count = count + 1) {
+                var productname = divlist[count].querySelector("p").textContent
+
+                if (productname.toUpperCase().indexOf(enteredvalue) < 0) {
+                    divlist[count].style.display = "none"
+                }
+                else {
+                    divlist[count].style.display = "block"
+                }
+            }
+        })}}
+    </script>
+
+
+</body>
